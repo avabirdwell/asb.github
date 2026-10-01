@@ -1,1 +1,60 @@
+<h2>Photo Highlights</h2>
+  <p>Here are a few representative images you can replace with your own:</p>
+
+  <div class="gallery">
+    <img src="assets/americorps1.jpg" alt="Teaching coastal ecology">
+    <img src="assets/americorps2.jpg" alt="Fieldwork on Hurricane Island">
+    <img src="assets/americorps3.jpg" alt="Student aquaculture activity">
+  </div>
+
+  <h2>Skills & Experience Gained</h2>
+  <ul>
+    <li>Field‑based marine science instruction</li>
+    <li>Community engagement and outreach</li>
+    <li>Curriculum development for coastal science</li>
+    <li>Facilitation of stewardship and conservation projects</li>
+    <li>Cold‑water fieldwork and island‑based logistics</li>
+  </ul>
+
+  <h2>Gallery Inspiration</h2>
+  <p>Below are example visuals similar to what you might include:</p>
+
+  body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f2f7f9;
+  color: #003049;
+  margin: 40px;
+}
+
+h1, h2 {
+  color: #006d77;
+}
+
+nav a {
+  margin-right: 15px;
+  color: #006d77;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #83c5be;
+}
+
+.gallery img {
+  width: 30%;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+hr {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, #006d77, #83c5be);
+  margin: 40px 0;
+  }
+
+</body>
+</html>
 
