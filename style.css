@@ -50,3 +50,10 @@ hr {
     background-color: #F4A876;
 }
 
+.homepage-image {
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    margin: 30px auto;
+    border-radius: 10px;
+}
