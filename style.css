@@ -1,3 +1,28 @@
+h1 {
+    color: #006d77;
+    font-size: 40px;
+}
+
+nav {
+    margin: 20px 0;
+    padding: 15px;
+}
+
+nav a {
+    color: #006d77;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover {
+    color: #83c5be;
+}
+
+.americorps-page {
+    background-color: #f2f7f9;
+}
+
+
 <h2>Photo Highlights</h2>
   <p>Here are a few representative images you can replace with your own:</p>
 
