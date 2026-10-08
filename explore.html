@@ -1,41 +1,91 @@
-
+<!DOCTYPE html>
+<html>
 
 <head>
-    <title>Exploring</title>
+    <title>Adventures | Ava Birdwell</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet map CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 </head>
 
-<body class="research-page">
-  
-  <h1>Research</h1>
-  <p><strong>Some projects... From hugging trees to see if there was a difference in their diameter based on their proximity to human activity at my local park, to assisting the Maldives Whale Shark Research Programme and conducting field studies in Eastern Australia, research is something that has brought me closer to the natural environment and to communities within it </strong></p>
+<body>
+
+    <h1>My Adventures</h1>
+
+    <p>Explore the places I've been and the experiences I've had along the way.</p>
+
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About</a> |
+        <a href="americorps.html">AmeriCorps</a> |
+        <a href="research.html">Research</a> |
+        <a href="cv.html">CV</a> |
+        <a href="travel.html">Adventures</a>
+    </nav>
+
+    <hr>
+
+    <h2>Explore the Map</h2>
+
+    <p>Click on a location to learn more about my adventures there.</p>
+
+    <div id="map"></div>
 
 
-  <hr>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <h2>Maldives Whale Shark Research Programme</h2>
-  <p>
-    In summer 2022, I traveled to the South Ari Atoll in the Maldives to volunteer with the MWSRP in research on whale sharks and marine megafauna
-  </p>
+    <script>
 
-  <h2>Broadening Access to Climate AI Innovation</h2>
-  <ul>
-    <li>Under the guidance of Dr. Mona Sloane (Data Science and Media Studies); Dr. Antonios Mamalakis (Data Science and Environmental Science); and Dr. Charity Nyelele (Environmental Science) at the University of Virginia ....</li>
-    <li>more about the project....</li>
-  </ul>
+        // Create the map
+        const map = L.map('map').setView([20, 0], 2);
 
-  <h2>UVA Environmental Institute</h2>
-  <p>
-    My service strengthened my commitment to community‑centered environmental education and deepened my understanding of how coastal communities engage with science, stewardship, and marine resource management. These experiences directly inform my ongoing work in fisheries, shark depredation research, and socio‑ecological systems.
-  </p>
+        // Add the map background
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
 
 
-<h2> Fulbright Study/Research Application 2025</h2>
-<p> talk about it here </p>
+        // Australia
+        L.marker([-27.5, 153.0]).addTo(map)
+            .bindPopup(`
+                <h3>Australia</h3>
+                <p>Study abroad, fieldwork, and marine adventures.</p>
+                <a href="australia.html">Explore Australia →</a>
+            `);
 
-<h2> Fulbright Study/Research Application 2026</h2>
-<p> talk about it here </p>
+
+        // Maldives
+        L.marker([3.2, 73.2]).addTo(map)
+            .bindPopup(`
+                <h3>Maldives</h3>
+                <p>Whale shark research aboard a research vessel.</p>
+                <a href="maldives.html">Explore the Maldives →</a>
+            `);
+
+
+        // Puerto Rico
+        L.marker([18.2, -66.5]).addTo(map)
+            .bindPopup(`
+                <h3>Puerto Rico</h3>
+                <p>Travel, salsa, and exploring Puerto Rican culture.</p>
+                <a href="puerto-rico.html">Explore Puerto Rico →</a>
+            `);
+
+
+        // Maine
+        L.marker([44.3, -69.8]).addTo(map)
+            .bindPopup(`
+                <h3>Maine</h3>
+                <p>Marine conservation, Hurricane Island, and AmeriCorps.</p>
+                <a href="maine.html">Explore Maine →</a>
+            `);
+
+    </script>
 
 </body>
 </html>
-  
