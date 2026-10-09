@@ -1,15 +1,21 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Adventures | Ava Birdwell</title>
 
+    <!-- Your website's existing styles -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Leaflet map CSS -->
-    <link rel="stylesheet"
-          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <!-- Leaflet map styles -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
 </head>
 
 <body>
@@ -24,43 +30,23 @@
         <a href="americorps.html">AmeriCorps</a> |
         <a href="research.html">Research</a> |
         <a href="cv.html">CV</a> |
-        <a href="explore.html">Explore</a>
+        <a href="explore.html">Adventures</a>
     </nav>
 
     <hr>
 
     <h2>Explore the Map</h2>
 
-    <p>Click on a location to learn more about my adventures there.</p>
+    <p>Click a pin to learn more about my adventures in that location.</p>
 
+    <!-- The interactive map will appear here -->
     <div id="map"></div>
 
-
+    <!-- Load Leaflet before our own map script -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<script>
-    const map = L.map('map').setView([20, 0], 2);
-
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    L.marker([-27.5, 153.0]).addTo(map)
-        .bindPopup(`
-            <h3>Australia</h3>
-            <p>Study abroad, fieldwork, and marine adventures.</p>
-            <a href="australia.html">Explore Australia →</a>
-        `);
-
-    L.marker([3.2, 73.2]).addTo(map)
-        .bindPopup(`
-            <h3>Maldives</h3>
-            <p>Whale shark research aboard a research vessel.</p>
-            <a href="maldives.html">Explore the Maldives →</a>
-        `);
-</script>
-
+    <!-- Our destinations and map behavior -->
+    <script src="script.js"></script>
 
 </body>
 </html>
