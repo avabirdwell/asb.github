@@ -110,6 +110,9 @@ hr {
     }
 }
 
+.image-text.reverse {
+    flex-direction: row-reverse;
+}
 
 
 /* Right-side navigation menu */
