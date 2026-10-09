@@ -64,11 +64,17 @@ hr {
 }
 
 
-<!-- Leaflet map CSS -->
+
+/* Interactive Explore map */
+
 #map {
     height: 600px;
     width: 90%;
+    max-width: 1200px;
     margin: 30px auto;
     border-radius: 10px;
+    border: 1px solid #83c5be;
+    z-index: 1;
 }
+
 
