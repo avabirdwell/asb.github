@@ -64,6 +64,68 @@ hr {
 }
 
 
+/* Right-side navigation menu */
+
+.side-nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px;
+    background-color: #ffffff;
+    border: 1px solid #83c5be;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.side-nav a {
+    display: block;
+    padding: 8px 10px;
+    color: #006d77;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.side-nav a:hover {
+    background-color: #e4f3f2;
+    color: #003049;
+}
+
+/* Make room for the menu on larger screens */
+body {
+    margin-right: 170px;
+}
+
+/* Adjust the menu for phones and narrow screens */
+@media (max-width: 650px) {
+    .side-nav {
+        top: 10px;
+        right: 10px;
+        transform: none;
+        padding: 6px;
+        gap: 2px;
+    }
+
+    .side-nav a {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    body {
+        margin: 15px;
+        padding-top: 285px;
+    }
+}
+
+
+
 
 /* Interactive Explore map */
 
