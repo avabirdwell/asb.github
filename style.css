@@ -50,7 +50,6 @@ hr {
 }
 
 
-
 .research-page{
     background-color: #F4A876;
 }
@@ -62,6 +61,9 @@ hr {
     margin: 30px auto;
     border-radius: 10px;
 }
+
+.withtext-image {
+    display: block
 
 
 /* Right-side navigation menu */
