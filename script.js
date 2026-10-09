@@ -1,53 +1,72 @@
 
-<!--For Explore Page--> 
- <!-- Leaflet JavaScript -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+/* =====================================
+   1. YOUR VISITED LOCATIONS
+   Add new destinations to this list.
+   ===================================== */
 
-    <script>
-
-        // Create the map
-        const map = L.map('map').setView([20, 0], 2);
-
-        // Add the map background
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19,
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-
-
-        // Australia
-        L.marker([-27.5, 153.0]).addTo(map)
-            .bindPopup(`
-                <h3>Australia</h3>
-                <p>Study abroad, fieldwork, and marine adventures.</p>
-                <a href="australia.html">Explore Australia →</a>
-            `);
-
-
-        // Maldives
-        L.marker([3.2, 73.2]).addTo(map)
-            .bindPopup(`
-                <h3>Maldives</h3>
-                <p>Whale shark research aboard a research vessel.</p>
-                <a href="maldives.html">Explore the Maldives →</a>
-            `);
-
-
-        // Puerto Rico
-        L.marker([18.2, -66.5]).addTo(map)
-            .bindPopup(`
-                <h3>Puerto Rico</h3>
-                <p>Travel, salsa, and exploring Puerto Rican culture.</p>
-                <a href="puerto-rico.html">Explore Puerto Rico →</a>
-            `);
+const adventures = [
+    {
+        name: "Gold Coast, Australia",
+        latitude: -28.0167,
+        longitude: 153.4000,
+        description: "Study abroad and coastal adventures.",
+        page: "australia.html"
+    },
+    {
+        name: "Maldives",
+        latitude: 3.2028,
+        longitude: 73.2207,
+        description: "Whale shark research aboard a research vessel.",
+        page: "maldives.html"
+    },
+    {
+        name: "San Juan, Puerto Rico",
+        latitude: 18.4655,
+        longitude: -66.1057,
+        description: "Travel, salsa, and exploring Puerto Rican culture.",
+        page: "puerto-rico.html"
+    },
+    {
+        name: "Maine, USA",
+        latitude: 44.3106,
+        longitude: -69.7795,
+        description: "Coastal conservation and island adventures.",
+        page: "maine.html"
+    }
+];
 
 
-        // Maine
-        L.marker([44.3, -69.8]).addTo(map)
-            .bindPopup(`
-                <h3>Maine</h3>
-                <p>Marine conservation, Hurricane Island, and AmeriCorps.</p>
-                <a href="maine.html">Explore Maine →</a>
-            `);
+/* =====================================
+   2. CREATE THE MAP
+   ===================================== */
 
-    </script>
+// Start with a view of the world.
+const map = L.map("map").setView([20, 0], 2);
+
+// Add the world map background.
+L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+
+/* =====================================
+   3. ADD A PIN FOR EACH DESTINATION
+   ===================================== */
+
+adventures.forEach(function(place) {
+
+    // Create a marker at the destination's coordinates.
+    const marker = L.marker([
+        place.latitude,
+        place.longitude
+    ]).addTo(map);
+
+    // Add a popup with the destination and its page link.
+    marker.bindPopup(`
+        <h3>${place.name}</h3>
+        <p>${place.description}</p>
+        <a href="${place.page}">Explore this adventure &rarr;</a>
+    `);
+
+});
