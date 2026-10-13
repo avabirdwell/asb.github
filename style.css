@@ -154,63 +154,72 @@ hr {
 }
 
 
-/* Right-side navigation menu */
 
-.side-nav {
+/* Fixed navigation in the top-right corner */
+
+nav.side-nav {
     position: fixed;
-    top: 50%;
+    top: 20px;
     right: 20px;
-    transform: translateY(-50%);
+
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 12px;
+    align-items: stretch;
+    gap: 4px;
+
+    width: 130px;
+    margin: 0;
+    padding: 10px;
+
     background-color: #ffffff;
     border: 1px solid #83c5be;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
     z-index: 1000;
 }
 
-.side-nav a {
+nav.side-nav a {
     display: block;
     padding: 8px 10px;
+
     color: #006d77;
-    text-decoration: none;
-    font-weight: bold;
     font-size: 14px;
-    border-radius: 6px;
-    white-space: nowrap;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.side-nav a:hover {
+nav.side-nav a:hover {
     background-color: #e4f3f2;
     color: #003049;
 }
 
-/* Make room for the menu on larger screens */
-body {
-    margin-right: 170px;
+/* Keep page content clear of the sidebar on larger screens */
+@media (min-width: 900px) {
+    body:has(nav.side-nav) {
+        padding-right: 155px;
+    }
 }
 
-/* Adjust the menu for phones and narrow screens */
+/* Smaller screens */
 @media (max-width: 650px) {
-    .side-nav {
+    nav.side-nav {
         top: 10px;
         right: 10px;
-        transform: none;
+        width: 110px;
         padding: 6px;
         gap: 2px;
     }
 
-    .side-nav a {
+    nav.side-nav a {
         padding: 6px;
         font-size: 12px;
     }
 
-    body {
-        margin: 15px;
-        padding-top: 285px;
+    body:has(nav.side-nav) {
+        padding-top: 300px;
+        padding-right: 0;
     }
 }
 
