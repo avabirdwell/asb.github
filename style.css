@@ -194,6 +194,18 @@ nav.side-nav a:hover {
     color: #003049;
 }
 
+/* Keep intro text clear of the fixed top-right navigation */
+.page-intro {
+box-sizing: border-box;
+padding-right: 170px;
+}
+
+.page-intro h1,
+.page-intro p {
+overflow-wrap: break-word;
+}
+
+
 
 /* AmeriCorps dropdown sections */
 
