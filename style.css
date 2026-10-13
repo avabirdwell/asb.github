@@ -198,63 +198,70 @@ nav.side-nav a:hover {
 /* AmeriCorps dropdown sections */
 
 .dropdown-section {
-    max-width: 900px;
-    margin: 20px 0;
-    border: 1px solid #83c5be;
-    border-radius: 8px;
-    background-color: #ffffff;
-    overflow: hidden;
+width: 100%;
+max-width: none;
+box-sizing: border-box;
+margin: 20px 0;
+border: 1px solid #83c5be;
+border-radius: 8px;
+background-color: #ffffff;
+overflow: hidden;
 }
 
 /* Clickable heading */
 .dropdown-section summary {
-    padding: 16px 20px;
-    color: #006d77;
-    background-color: #eaf4f5;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    list-style: none;
+display: block;
+box-sizing: border-box;
+width: 100%;
+padding: 16px 20px;
+color: #006d77;
+background-color: #eaf4f5;
+font-size: 18px;
+font-weight: bold;
+cursor: pointer;
+list-style: none;
 }
 
 /* Remove default marker in most browsers */
 .dropdown-section summary::-webkit-details-marker {
-    display: none;
+display: none;
 }
 
 /* Add a custom arrow */
 .dropdown-section summary::after {
-    content: "+";
-    float: right;
-    font-size: 20px;
+content: "+";
+float: right;
+font-size: 20px;
 }
 
 /* Change plus to minus when expanded */
 .dropdown-section[open] summary::after {
-    content: "−";
+content: "−";
 }
 
 .dropdown-section summary:hover {
-    background-color: #d8e9e9;
+background-color: #d8e9e9;
 }
 
 /* Content inside each dropdown */
 .dropdown-content {
-    padding: 20px;
-    line-height: 1.6;
+width: 100%;
+box-sizing: border-box;
+padding: 20px;
+line-height: 1.6;
 }
 
 .dropdown-content p {
-    margin-top: 0;
-    margin-bottom: 16px;
+margin-top: 0;
+margin-bottom: 16px;
 }
 
 /* Images inside dropdown content */
 .dropdown-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin: 10px 0;
+max-width: 100%;
+height: auto;
+border-radius: 6px;
+margin: 10px 0;
 }
 
 
