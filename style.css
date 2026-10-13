@@ -63,8 +63,47 @@ hr {
 }
 
 
+/* Vertical image beside paragraph text */
 
-/* Image beside text */
+.withtextvertical-image {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin: 30px 0;
+    max-width: 900px;
+}
+
+.withtextvertical-image img {
+    width: 3in;
+    height: 4in;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.withtextvertical-image p {
+    flex: 1;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+/* Stack image and text on smaller screens */
+@media (max-width: 600px) {
+    .withtextvertical-image {
+        flex-direction: column;
+    }
+
+    .withtextvertical-image img {
+        width: 100%;
+        max-width: 3in;
+        height: auto;
+        aspect-ratio: 3 / 4;
+    }
+}
+
+    
+
+
+/* Image beside text */ with label
 
 .image-text {
     display: flex;
