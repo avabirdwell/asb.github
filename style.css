@@ -100,7 +100,7 @@ hr {
     }
 }
 
-    
+
 
 
 /* Image beside text */
@@ -276,6 +276,40 @@ border-radius: 6px;
 margin: 10px 0;
 }
 
+
+
+/* Volunteer Management staircase */
+.volunteer-staircase {
+    width: 100%;
+}
+
+.volunteer-step {
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.volunteer-step.step-one {
+    margin-left: 0;
+}
+
+.volunteer-step.step-two {
+    margin-left: 12%;
+}
+
+.volunteer-step.step-three {
+    margin-left: 24%;
+}
+
+/* Keep staircase from overflowing on phones */
+@media (max-width: 600px) {
+    .volunteer-step,
+    .volunteer-step.step-one,
+    .volunteer-step.step-two,
+    .volunteer-step.step-three {
+        width: 100%;
+        margin-left: 0;
+    }
+}
 
 
 /* Interactive Explore map */
